@@ -1,0 +1,62 @@
+.header {
+    padding-top: em(22, $fz);
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    &__logo {
+        max-width: em(260, $fz);
+
+        @media(max-width: 1500px) {
+            max-width: em(179, $fz);
+        } 
+        @media(max-width: 1023px) {
+            max-width: em(225, $fz);
+        } 
+        @media(max-width: 767px) {
+            max-width: em(110, $fz);
+        } 
+    }
+
+    &__nav {
+        @media(max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: em(53, $fz);
+
+        @media(max-width: 1500px) {
+            gap: em(40, $fz);
+        } 
+        @media(max-width: 1023px) {
+            gap: em(60, $fz);
+        } 
+        @media(max-width: 767px) {
+            gap: em(30, $fz);
+        } 
+    }
+
+    &__button {
+        width: em(32, $fz);
+        height: em(32, $fz);
+
+        @media(max-width: 1500px) {
+            width: em(22, $fz);
+            height: em(22, $fz);
+        } 
+        @media(max-width: 1023px) {
+            width: em(34, $fz);
+            height: em(34, $fz);
+        } 
+        @media(max-width: 767px) {
+            width: em(17, $fz);
+            height: em(17, $fz);
+        } 
+    }
+}

@@ -1,21 +1,32 @@
 <template>
-  <h1>Свежеобжаренный кофе</h1>
+  <div class="millor">
+    <HeaderMillor />
+    <MainSlider />
+    <ListCatalogs />
+    <ListDiscount />
+    <OurAdvantage />
+  </div>
 </template>
 
 <script>
+import HeaderMillor from './components/sections/HeaderMillor.vue';
+import MainSlider from './components/sections/MainSlider.vue';
+import ListCatalogs from './components/sections/ListCatalogs.vue';
+import ListDiscount from './components/sections/ListDiscount.vue';
+import OurAdvantage from './components/sections/OurAdvantage.vue';
 
 export default {
   name: 'App',
+  components: {
+    HeaderMillor,
+    MainSlider,
+    ListCatalogs,
+    ListDiscount,
+    OurAdvantage,
+  },
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<styles scoped lang="scss">
+  @import "./styles/component";
+</styles>

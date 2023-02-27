@@ -1,0 +1,21 @@
+.millor-title {
+    &__label {
+        $fz: 50;
+        font-size: em($fz, $fz_base);
+        font-weight: 900;
+        line-height: 124%;
+
+        @media(max-width: 1500px) {
+            $fz: 35;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 1023px) {
+            $fz: 40;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 767px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base); 
+        } 
+    }
+}

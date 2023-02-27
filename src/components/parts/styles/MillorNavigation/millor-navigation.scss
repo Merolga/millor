@@ -1,0 +1,55 @@
+.nav {
+    &__list {
+        display: flex;
+        gap: em(100, $fz);
+        list-style: none;
+        
+        @media(max-width: 1500px) {
+            gap: em(66, $fz);
+        } 
+        @media(max-width: 1023px) {
+            flex-direction: column;
+            gap: em(40, $fz);
+        } 
+    }
+
+    &__link {
+        $fz: 25;
+        position: relative;
+        color: inherit;
+        font-size: em($fz, $fz_base);
+        text-decoration: none;
+
+        @media(max-width: 1500px) {
+            $fz: 18;
+            font-size: em($fz, $fz_base);
+        } 
+        @media(max-width: 1023px) {
+            $fz: 32;
+            font-size: em($fz, $fz_base);
+        } 
+        @media(max-width: 767px) {
+            $fz: 16;
+            font-size: em($fz, $fz_base);
+        } 
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 1px;
+
+            content: '';
+            background-color: $color_accent;
+            transition: width 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}

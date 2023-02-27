@@ -1,0 +1,136 @@
+.list-discount {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        max-width: em(1520, $fz);
+
+    }
+
+    &__title {
+        margin-bottom: em(50, $fz);
+        text-align: end;
+        
+        @media(max-width: 1500px) {
+            margin-bottom: em(40, $fz);
+        } 
+        @media(max-width: 1023px) {
+            margin-bottom: em(50, $fz);
+        } 
+        @media(max-width: 767px) {
+            margin-bottom: em(30, $fz);
+        } 
+    }
+
+    &__description {
+        $fz: 25;
+        max-width: em(1110, $fz);
+        font-size: em($fz, $fz_base);
+        text-align: end;
+        
+        @media(max-width: 1500px) {
+            $fz: 18;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 1023px) {
+            $fz: 20;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 767px) {
+            $fz: 14;
+            font-size: em($fz, $fz_base); 
+        } 
+    }
+
+    &__item {
+        height: em(652, $fz);
+    }
+
+    &__slider {
+        max-width: em(1310, $fz);
+        margin-top: em(45, $fz);
+
+        padding: em(35 20 58, $fz);
+    }
+
+    &__all {
+       &:hover {}
+    }
+}
+
+.list-discount-all {
+    padding: em(10 29, $fz);
+    border-radius: em(30, $fz);
+    color: currentColor;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $color_light;
+        color: $color_accent;
+    }
+    
+    &__label {
+        $fz: 20;
+        position: relative;
+
+        font-size: em($fz, $fz_base);
+        
+        &::before {
+            position: absolute;
+            bottom: em(-3, $fz);
+            left: 0;
+            width: 100%;
+            height: 1px;
+            content: '';
+            background-color: currentColor;
+        }
+    }
+}
+
+.list-discount-slider {
+    &__btn {
+        position: absolute;
+        top: 50%;
+        width: em(70, $fz);
+        height: em(70, $fz);
+        transform: translateY(-50%);
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+    }
+}
+
+.list-discount-slider-btn {
+    $self: &;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $color_accent;
+
+    &--prev {
+        #{$self}__arrow {
+            transform: scaleX(-1);
+        }
+    }
+
+    &__arrow {
+        width: em(26, $fz);
+        height: em(16, $fz);
+    }
+}
+
+.swiper-button-disabled {
+    opacity: 0.6;
+    cursor: default;
+}

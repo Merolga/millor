@@ -1,0 +1,111 @@
+.button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+
+    &--theme-main {
+        background-color: $color_accent;
+        color: $color_primary;
+        border-radius: em(5, $fz);
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $color_button_hover;
+        }
+    }
+
+    &--theme-icon {
+        &:hover {
+            color: $color_accent;
+        }
+    }
+
+    &__icon {
+        width: 100%;    
+        height: 100%;
+        stroke: currentColor;
+        transition: color 0.3s ease-in-out;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        line-height: 120%;
+
+        &--size-xs {
+            $fz: 18;
+            padding: em(13 15, $fz);
+            font-size: em($fz, $fz_base);
+
+            @media(max-width: 1500px) {
+                $fz: 12;
+                padding-top: em(9, $fz);
+                padding-bottom: em(9, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 1023px) {
+                $fz: 16;
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 767px) {
+                $fz: 12;
+                padding-top: em(7, $fz);
+                padding-bottom: em(7, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+        }
+
+        &--size-s {
+            $fz: 25;
+            padding: em(15 20, $fz);
+            font-size: em($fz, $fz_base);
+
+            @media(max-width: 1500px) {
+                $fz: 18;
+                padding-top: em(10, $fz);
+                padding-bottom: em(10, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 1023px) {
+                $fz: 25;
+                padding-top: em(20, $fz);
+                padding-bottom: em(20, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 767px) {
+                $fz: 18;
+                padding-top: em(14, $fz);
+                padding-bottom: em(14, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+        }
+    
+        &--size-l {
+            $fz: 30;
+            padding: em(22, $fz);
+            font-size: em($fz, $fz_base);
+
+            @media(max-width: 1500px) {
+                $fz: 21;
+                padding-top: em(15, $fz);
+                padding-bottom: em(15, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 1023px) {
+                $fz: 25;
+                padding-top: em(20, $fz);
+                padding-bottom: em(20, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+            @media(max-width: 767px) {
+                $fz: 18;
+                padding-top: em(14, $fz);
+                padding-bottom: em(14, $fz);
+                font-size: em($fz, $fz_base); 
+            } 
+        } 
+    }
+}

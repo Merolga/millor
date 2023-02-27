@@ -1,0 +1,126 @@
+.list-catalogs {
+    &__inner {
+        margin-top: em(83, $fz);
+        margin-bottom: em(90, $fz);
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: em(20, $fz);
+
+        @media(max-width: 1500px) {
+            margin-top: em(60, $fz);
+            margin-bottom: em(30, $fz);
+        } 
+        @media(max-width: 1023px) {
+            margin-bottom: em(160, $fz);
+        }  
+        @media(max-width: 767px) {
+            margin-top: em(30, $fz);
+            margin-bottom: em(88, $fz);
+        }         
+    }
+
+    &__item {
+        height: em(539, $fz);
+
+        @media(max-width: 1500px) {
+            height: em(381, $fz);
+        } 
+    }
+}
+
+.list-catalogs-item {
+    $self: &;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: em(364 35 65, $fz);
+
+    @media(max-width: 1500px) {
+        padding: em(250 24 46, $fz);
+    } 
+
+    &:hover {
+        padding-top: em(320, $fz);
+
+        @media(max-width: 1500px) {
+            padding-top: em(200, $fz);
+        } 
+
+        #{$self}__title {
+            $fz: 30;
+            font-size: em($fz, $fz_base);
+
+            @media(max-width: 1500px) {
+                $fz: 20;
+                font-size: em($fz, $fz_base); 
+            } 
+        }
+
+        #{$self}__btn {
+            opacity: 1;
+        }
+
+        #{$self}__image {
+            transform: translateX(-50%) translateY(-25%);
+        }
+    }
+
+    &__title {
+        $fz: 25;
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+        line-height: 120%;
+        text-align: center;
+
+        @media(max-width: 1500px) {
+            $fz: 18;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 1023px) {
+            $fz: 22;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 767px) {
+            $fz: 18;
+            font-size: em($fz, $fz_base); 
+        } 
+    }
+
+    &__btn {
+        opacity: 0;
+
+        width: 100%;
+        margin-top: auto;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    &__image {
+        position: absolute;
+        left: 50%;
+        width: 80%;
+        transform: translateX(-50%);
+        transition: all 0.3s ease-in-out;
+
+        &--coffee {
+            top: em(67, $fz);
+            max-width: em(295, $fz);
+        }
+
+        &--tea {
+            top: em(25, $fz);
+            max-width: em(235, $fz);
+        }
+
+        &--vending {
+            top: em(60, $fz);
+            max-width: em(276, $fz);
+        }
+
+        &--eating {
+            top: em(94, $fz);
+            max-width: em(266, $fz);
+        }
+    }
+}

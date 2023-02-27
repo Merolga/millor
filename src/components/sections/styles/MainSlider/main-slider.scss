@@ -1,0 +1,189 @@
+.main-slider {
+    &__slide {
+        @media(max-width: 1023px) {
+            min-height: em(978, $fz);
+        } 
+    }
+}
+
+.main-slider-slide {
+    padding-top: em(142, $fz);
+    padding-bottom: em(227, $fz);
+    overflow: hidden;
+
+    @media(max-width: 1500px) {
+        padding-top: em(100, $fz);
+        padding-bottom: em(201, $fz);
+    }
+    @media(max-width: 1023px) {
+        padding-top: em(130, $fz);
+        padding-bottom: em(70, $fz);
+    } 
+    @media(max-width: 767px) {
+        padding-top: em(60, $fz);
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__title {
+        margin-bottom: em(60, $fz);
+        
+        @media(max-width: 1500px) {
+            margin-bottom: em(40, $fz);
+        } 
+        @media(max-width: 1023px) {
+            max-width: em(472, $fz);
+            margin-bottom: em(80, $fz);
+        } 
+        @media(max-width: 767px) {
+            max-width: em(283, $fz);
+            margin-bottom: em(30, $fz);
+        } 
+    }
+
+    &__label {
+        $fz: 25;
+        max-width: em(658, $fz);
+
+        font-size:  em($fz, $fz_base); 
+
+        &:not(:last-child) {
+            margin-bottom: em(30, $fz);
+        }
+
+        @media(max-width: 1500px) {
+            $fz: 18;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 1023px) {
+            $fz: 20;
+            max-width: em(314, $fz);
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 767px) {
+            $fz: 14;
+            max-width: em(294, $fz);
+            font-size: em($fz, $fz_base); 
+        } 
+    }
+
+    &__btn {
+        margin-top: em(50, $fz);
+        max-width: em(400, $fz);
+
+        @media(max-width: 1500px) {
+            margin-top: em(30, $fz);
+        } 
+        @media(max-width: 1023px) {
+            max-width: 100%;
+            margin-top: em(340, $fz);
+        } 
+        @media(max-width: 767px) {
+            margin-top: em(200, $fz);
+        } 
+    }
+
+    &__decor {
+        position: relative;
+        margin-top: vw(-160, 1920);
+    }
+
+    &__img {
+        position: absolute;
+
+        &--header-coffee {
+            top: vw(-60, 1920);
+            right: 0;
+            width: vw(900, 1920);
+
+            @media(max-width: 1023px) {
+                top: em(20, $fz);
+                right: em(-70, $fz);
+                width: em(600, $fz);
+            } 
+        }
+
+        &--header-cup {
+            top: 0;
+            right: 0;
+            width: vw(744, 1920);
+
+            @media(max-width: 1023px) {
+                top: em(70, $fz);
+                right: em(-40, $fz);
+                width: em(500, $fz);
+            } 
+        }
+    }
+}
+
+.main-slider-slide-title {
+    &__label {
+        $fz: 80;
+        font-size: em($fz, $fz_base); 
+        font-weight: 900;
+        line-height: 120%; 
+
+        @media(max-width: 1500px) {
+            $fz: 56;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 1023px) {
+            $fz: 50;
+            font-size: em($fz, $fz_base); 
+        } 
+        @media(max-width: 767px) {
+            $fz: 30;
+            font-size: em($fz, $fz_base); 
+        } 
+    }
+}
+
+.swiper-horizontal {
+    .swiper-pagination {
+        --swiper-pagination-bullet-horizontal-gap: 15px;
+        top: em(92, $fz);
+        right: 0;
+        bottom: unset;
+        left: unset;
+        width: fit-content;
+
+        @media(max-width: 1023px) {
+            top: em(700, $fz);
+            right: unset;
+            left: 0;
+            width: fit-content;
+        } 
+    }
+}
+
+.swiper-pagination-bullet {
+    width: em(20, $fz);
+    height: em(20, $fz);
+    background-color: $color_dark;
+    opacity: 1;
+
+    @media(max-width: 1500px) {
+        width: em(14, $fz);
+        height: em(14, $fz);
+    } 
+    @media(max-width: 1023px) {
+        width: em(25, $fz);
+        height: em(25, $fz);
+    } 
+    @media(max-width: 767px) {
+        width: em(13, $fz);
+        height: em(13, $fz);
+    } 
+}
+
+.swiper-pagination-bullet-active {
+    background-color: hsl(12, 38%, 18%);
+
+    @media(max-width: 1023px) {
+        background-color: $color_accent;
+    } 
+}

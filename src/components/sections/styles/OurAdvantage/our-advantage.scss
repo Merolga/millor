@@ -1,0 +1,88 @@
+.our-advantage {
+    position: relative;
+    padding-top: em(100, $fz);
+
+    &__wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: em(2766, $fz);
+        height: em(288, $fz);
+        fill: $color_button_light;
+    }
+
+    &__bg {
+        padding-top: em(45, $fz);
+        padding-bottom: em(80, $fz);
+        background-color: $color_button_light;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;   
+        gap: em(85, $fz);     
+    }
+
+    &__image {
+        max-width: em(760, $fz);
+    }
+
+    &__title {
+        position: relative;
+        max-width: em(585, $fz);
+        margin-bottom: em(35, $fz);
+        margin-left: auto;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: em(60, $fz);
+    }
+}
+
+.our-advantage-item {
+    display: flex;
+    gap: em(50, $fz);
+
+    &__title {
+        $fz: 30;
+        margin-bottom: em(20, $fz);
+
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+    }
+
+    &__descr {
+        $fz: 25;
+        font-size: em($fz, $fz_base); 
+    }
+
+    &__decor {
+        width: em(84, $fz);
+        height: em(84, $fz);
+        flex: 1 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $color_accent;
+    }
+
+    &__icon {
+        height: em(31, $fz);
+
+        &--cup {
+            width: em(31, $fz);
+        }
+
+        &--label {
+            width: em(31, $fz);
+        }
+
+        &--consultation {
+            width: em(36, $fz);
+        }
+    }
+}
