@@ -1,4 +1,8 @@
 .millor-title {
+    &--theme-light {
+        color: $color_primary;
+    }
+
     &__label {
         $fz: 50;
         font-size: em($fz, $fz_base);

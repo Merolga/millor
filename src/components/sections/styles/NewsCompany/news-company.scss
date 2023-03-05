@@ -1,0 +1,32 @@
+.news-company {
+    position: relative;
+
+    padding-top: em(36, $fz);
+    padding-bottom: em(100, $fz);
+
+    &__wave {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: em(288, $fz);
+
+        &--top {
+            top: em(146, $fz);
+            fill: $color_button_light;
+        }
+
+        &--bottom {
+            bottom: 0;
+            transform: scaleX(-1);
+            fill: $color_primary;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: em(100, $fz);
+    }
+}

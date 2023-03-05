@@ -1,15 +1,14 @@
 <template>
   <nav class="nav">
     <ul class="nav__list">
-      <li
+      <router-link
         v-for="(item, index) in listNavigation"
         :key="`nav-item-${index}`"
-        class="nav__item"
+        :to="`/${item.link}`"
+        class="nav__link"
       >
-        <a href="#" class="nav__link">
-          {{ item.name }}
-        </a>
-      </li>
+        {{ item.name }}
+      </router-link>
     </ul>
   </nav>
 </template>

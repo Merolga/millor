@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <MillorContainer class="header__container">
-      <a href="#">
+      <router-link to="/">
         <MillorPicture name="logo" class="header__logo" />
-      </a>
+      </router-link>
       <MillorNavigation class="header__nav" />
       <div class="header__btns">
         <MillorButton

@@ -1,10 +1,10 @@
 <template>
-  <picture class="picture">
+  <picture class="millor-picture">
     <source :srcset="pathWebp">
     <img
       :src="pathPng"
       :alt="name"
-      class="picture__image"
+      class="millor-picture__image"
     />
   </picture>
 </template>
@@ -17,9 +17,13 @@ export default {
       type: String,
       default: "",
     },
+    format: {
+      type: String,
+      default: 'png'
+    },
   },
   setup(props) {
-    const pathPng = require(`../../assets/images/${props.name}.png`);
+    const pathPng = require(`../../assets/images/${props.name}.${props.format}`);
     const pathWebp = require(`../../assets/images/${props.name}.webp`);
 
     return {
@@ -31,5 +35,5 @@ export default {
 </script>
 
 <styles scoped lang="scss">
-
+@import "./styles/MillorPicture/component";
 </styles>

@@ -1,0 +1,54 @@
+.our-work {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: em(205, $fz);
+    padding-bottom: em(153, $fz);
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__wave {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: em(288, $fz);
+
+
+        &--top {
+            top: 0;
+            transform: scaleY(-1);
+            fill: $color_button_light;
+        }
+
+        &--bottom {
+            bottom: -10px;
+            transform: scaleX(-1);
+            fill: $color_primary;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__title {
+        margin-bottom: em(100, $fz);
+    }
+
+    &__text {
+        $fz: 25;
+        max-width: em(1246, $fz);
+        margin-bottom: em(45, $fz);
+
+        font-size: em($fz, $fz_base);
+        line-height: 130%;
+        color: $color_primary;
+    }
+
+    &__btn {
+        margin-top: em(82, $fz);
+    }
+}

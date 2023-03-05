@@ -16,12 +16,15 @@ export const btnsHeader = [
 export const listNavigation = [
     {
         name: 'Каталог товаров',
+        link: 'catalog',
     },    
     {
         name: 'Блог',
+        link: 'blog',
     },  
     {
         name: 'Контакты',
+        link: 'contacts',
     },  
 ];
 
