@@ -1,0 +1,1 @@
+.tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25em}.tabs__link{width:100%;display:block;padding:.9375em;cursor:pointer}.tabs__item{border-radius:.3125em;border:1px solid #c9c9c9;background-color:#f5f5f5;text-align:center;color:#fab300}.tabs__item--is-active{border:1px solid #fab300;background-color:#fff7e0}
