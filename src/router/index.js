@@ -1,32 +1,41 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../components/pages/MainPage.vue'
+import MainPage from '../components/pages/MainPage.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: MainPage,
+    props: { mainPage: true }
   },
   {
     path: '/catalog',
-    name: 'catalog',
-    component: () => import(/* webpackChunkName: "catalog" */ '../components/pages/CatalogPage.vue')
+    name: 'Каталог товаров',
+    component: () => import(/* webpackChunkName: "catalog" */ '@/components/pages/CatalogPage.vue')
   },
   {
     path: '/blog',
-    name: 'blog',
-    component: () => import(/* webpackChunkName: "catalog" */ '../components/pages/BlogPage.vue')
+    name: 'Блог',
+    component: () => import(/* webpackChunkName: "blog" */ '@/components/pages/BlogPage.vue')
   },
   {
     path: '/contacts',
-    name: 'contacts',
-    component: () => import(/* webpackChunkName: "catalog" */ '../components/pages/ContactsPage.vue')
+    name: 'Контакты',
+    component: () => import(/* webpackChunkName: "contacts" */ '@/components/pages/ContactsPage.vue')
+  },
+  {
+    path: '/news/:url',
+    name: 'Новости компании',
+    component: () => import(/* webpackChunkName: "news" */ '@/components/pages/NewsPage.vue')
   },
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  scrollBehavior() {
+    return { left: 0, top: 0}
+  }
 })
 
 export default router

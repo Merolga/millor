@@ -1,0 +1,37 @@
+.breadcrumbs {
+    padding-top: em(40, $fz);
+    padding-bottom: em(50, $fz);
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: em(14, $fz);
+    }
+
+    &__item {
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+            position: relative;
+    
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: em(-9, $fz);
+                width: em(4, $fz);
+                height: em(4, $fz);
+    
+                content: '';
+                border-radius: 50%;
+                background-color: hsl(0, 0%, 13%);
+            }
+        }
+    }
+
+    &__link {
+        $fz: 18;
+        font-size: em($fz, $fz_base);
+        font-weight: 500;
+        color: hsl(0, 0%, 13%);
+    }
+}

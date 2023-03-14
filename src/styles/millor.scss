@@ -2,5 +2,10 @@
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;
     font-weight: 500;
+    color: $color_text;
     overflow-x: hidden;
+
+    @media(min-width: 1921px) {
+        font-size: 0.8888vw;
+    }
 }

@@ -18,7 +18,7 @@
 
 
         &--top {
-            top: 0;
+            top: em(-10, $fz);
             transform: scaleY(-1);
             fill: $color_button_light;
         }

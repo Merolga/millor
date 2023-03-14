@@ -1,0 +1,39 @@
+.news {
+    padding-bottom: em(100, $fz);
+
+    &__title {
+        margin-bottom: em(30, $fz);
+    }
+
+    &__image {
+        max-width: 60%;
+        margin-right: auto;
+        margin-bottom: em(30, $fz);
+        margin-left: auto;
+    }
+
+    &__content {
+        margin-bottom: em(30, $fz);
+
+        display: flex;
+        flex-direction: column;
+        gap: em(30, $fz);
+
+        p {
+            $fz: 20;
+            font-size: em($fz, $fz_base);
+        }
+    }
+
+    &__categories {
+        font-style: italic;
+    }
+
+    &__category:not(:last-child) {
+        margin-right: em(5, $fz);
+
+        &::after {
+            content: ',';
+        }
+    }
+}

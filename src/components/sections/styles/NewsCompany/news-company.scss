@@ -4,6 +4,17 @@
     padding-top: em(36, $fz);
     padding-bottom: em(100, $fz);
 
+    &::before {
+        position: absolute;
+        top: em(420, $fz);
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        content: '';
+        background-color: $color_button_light;
+    }
+
     &__wave {
         position: absolute;
         left: 0;
@@ -18,7 +29,7 @@
         &--bottom {
             bottom: 0;
             transform: scaleX(-1);
-            fill: $color_primary;
+            fill: hsl(0, 0%, 96%);
         }
     }
 
@@ -26,7 +37,104 @@
         position: relative;
     }
 
+    &__header {
+        margin-bottom: em(60, $fz);
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: em(20, $fz);
+    }
+
+    &__card {
+        height: em(400, $fz);
+        overflow: hidden;
+    }
+}
+
+.news-company-card {
+    $self: &;
+    display: flex;
+    
+    &:nth-child(1) {
+        grid-column: 1 / 8;
+    }
+
+    &:nth-child(2) {
+        grid-column: 8 / 13;
+        padding-left: em(60, $fz);
+
+        #{$self}__image {
+            display: none;
+        }
+    }
+
+    &:nth-child(3) {
+        grid-column: 1 / 6;
+        padding-left: em(60, $fz);
+
+        #{$self}__image {
+            display: none;
+        }
+    }
+
+    &:nth-child(4) {
+        grid-column: 6 / 13;
+    }
+
+    &__image {
+        width: em(336, $fz);
+        height: 100%;
+        flex: 1 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: em(30, $fz);
+        padding: em(40 80 30, $fz);
+    }
+
     &__title {
-        margin-bottom: em(100, $fz);
+        $fz: 25;
+        font-size: em($fz, $fz_base);
+        font-weight: 700;
+        line-height: 130%;
+    }
+
+    &__description{
+        $fz: 20;  
+        font-size: em($fz, $fz_base);
+        line-height: 130%;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+
+        p:not(:last-child) {
+            margin-bottom: em(30, $fz);
+        }
+    }
+}
+
+.news-company-card-link {
+    display: flex;
+    align-items: center;
+    gap: em(10, $fz);
+    color: $color_accent;
+
+    &__label {
+        $fz: 20;  
+        font-size: em($fz, $fz_base);
+    }
+
+    &__arrow {
+        width: em(13, $fz);
+        height: em(8, $fz);
+        stroke: currentColor;
     }
 }

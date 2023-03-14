@@ -1,0 +1,24 @@
+.footer {
+    padding-top: em(60, $fz);
+    padding-bottom: em(60, $fz);
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;    
+    }
+
+    &__logo {
+        max-width: em(260, $fz);
+
+        @media(max-width: 1500px) {
+            max-width: em(179, $fz);
+        } 
+        @media(max-width: 1023px) {
+            max-width: em(225, $fz);
+        } 
+        @media(max-width: 767px) {
+            max-width: em(110, $fz);
+        } 
+    }
+}

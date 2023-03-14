@@ -35,10 +35,10 @@
 
         &::before {
             position: absolute;
-            bottom: 0;
+            bottom: em(-6, $fz);
             left: 50%;
             width: 0;
-            height: 1px;
+            height: em(3, $fz);
 
             content: '';
             background-color: $color_accent;
@@ -51,5 +51,11 @@
                 width: 100%;
             }
         }
+    }
+}
+
+.router-link-active {
+    &::before {
+        width: 100%;
     }
 }

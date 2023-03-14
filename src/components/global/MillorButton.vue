@@ -27,12 +27,19 @@ export default {
       type: String,
       default: "",
     },
+    borderRadius: {
+      type: Number,
+      default: 5,
+    },
   },
   setup(props) {
     const pathIcon = require(`../../assets/images/sprite.svg`);
 
     const classBtn = computed(() =>
-      props.theme ? `button--theme-${props.theme}` : ""
+      [
+        props.theme ? `button--theme-${props.theme}` : "",
+        `button--border-${props.borderRadius}`
+      ]
     );
     const classLabel = computed(() =>
       props.size ? `button__label--size-${props.size}` : ""

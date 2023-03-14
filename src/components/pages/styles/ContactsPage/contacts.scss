@@ -1,0 +1,30 @@
+.contacts {
+
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: em(20, $fz);
+
+    &__link {
+        width: 100%;
+
+        display: block;
+        padding: em(15, $fz);
+        cursor: pointer;
+    }
+
+    &__item {
+        border-radius: em(5, $fz);
+        border: 1px solid hsl(0, 0%, 79%);  
+        background-color: hsl(0, 0%, 96%); 
+        text-align: center;   
+        color: $color_accent; 
+        
+        &--is-active {
+            border: 1px solid $color_accent;  
+            background-color: $color_button_light; 
+        }
+    }
+}
